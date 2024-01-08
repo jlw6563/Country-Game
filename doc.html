@@ -1,0 +1,73 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Countries Game</h1>
+        <hr>
+        <h2>Goal</h2>
+        <p>A game where people can test there knowledge on Countries(Specifically on capitals and continets</p>
+        <h2>How to Play</h2>
+        <p>Just select your game mode (and hit reset!) <- This was removed!</p>
+        <h2>What I had to Learn</h2>
+        <p>11/14/23 Today I had to learn what Fetch API was because it is what is used by Rest Countries I read up on both 
+            the documentation and on the fetch documentation. <a href="https://restcountries.com/#api-endpoints-using-this-project">
+            https://restcountries.com/#api-endpoints-using-this-project</a> used this link for officail documentation on rest. I foun this code:<br>
+            <code>
+                <br>
+                fetch('https://restcountries.eu/rest/v2/name/united kingdom')<br>
+                .then(response => response.json())<br>
+                .then(data => console.log(data));<br>
+                <br>
+            </code>
+            <br>
+            on this page: <a href="https://publicapis.io/rest-countries-api">https://publicapis.io/rest-countries-api</a>
+            it gave me a basic understanding of the api and how I should use it.<br>
+
+            <br>11/20/23 New things I added today were color changing result text and sound effects for right and wrong answers. I didn't know how sounds worked in javascript
+            but, after reading a quick stackoverflow page: <a href="https://stackoverflow.com/questions/9419263/how-to-play-audio">https://stackoverflow.com/questions/9419263/how-to-play-audio</a>
+            that was no longer an issue. Adding the sounds greatly improved the indication on the game state. If you had gotten multiple questions in a row wrong
+            even with the new coloring was still hard to tell if anything happened the new visual ques are a great feature.
+            
+            everything code wise works perfectly, I recieved feedback on the quite a bit. Prof Zinnser said to get rid of the flag background as it was distracting
+            however after asking people many said they liked it so I will keep it. I was also told to make my guessing box bigger so I did. I wanted to implement a dropdown
+            select as mentioned by a peer but I couldn't figure out how to implement it. So I started but then scrapped the idea. I was also told to fill the whitespace. But
+            I feel less is more...
+            <br>
+
+            <br>For a while I couldn't figure out why my code was being funky and my fetches weren't working, I think it can be attributed to the way fetch works and all timeing
+            things. After trying different things though it eventually worked. I also want to make note there is no reset button involved to switch modes I made it so that
+            upon swithcing modes everything would switch and also that the fields would clear I thought this was a cool feature.<br>
+
+            <br>I thought about adding another gameplay element but ultimately decideed against it cause it just didn't work, examples are a timer or like if you got it wrong it
+            resets. Which would be easy to add. But, the game is already pretty hard so I decided against it. Another thing that changed was the game modes I used to have
+            languages, capitals, and continets however because languages was an object and every country having a different feild this data was not usable so I swithed to timezones
+            however the issue with time zones is a country can have many so I decided to also scrap that idea. Therefore sticking with just capitals and continets.<br>
+
+            <br>If I were to work on this further I would definitly figure out the dropdown answer menu. Maybe using another api or something. As well as adding more gamemodes.
+            What I have improved upon compared to project 1 is firstly taking the less is more approach I mentioned. I found cluttered sites with lots of features just to be there
+            not as good as a simplistic design. Another thing is increasing the detail in the documentation. I really wanted to make sure I didn't lose the points again so I be very 
+            detailed. Lastly I would like to mention the amount of controls I wanted. I might've not checked every box in the rubric which I will try to finish up on my last day of work
+            but as of today I have been making this with mindset of the user in mind. If my family and friends were to use this how would they like it, so in other words a user centric 
+            approach to my designs. I had friends test to see what they could understand and what they couldn't(that was the reason I made switching gamemodes instant). Some things
+            just weren't apparent to me until I had peopel test out the program beyond the crit groups. People who didn't understand it was for a project. As they are my target audience
+            so I will make something that they will find intutive. In conclusion I can say confidently this is a major step up from project 1 and something I am very proud of.<br>
+
+            <br>11/29/23 I am cleaning up things that need to be fixed mostly. For starters I made the banner look better I made it go to the bottom of the first row so that it's
+            easier to see. I also added bold to the country name and the what it wants you to guess as well as a darker color of red. This will hopefully help it stand out what should 
+            be guessed.<br>
+
+            <br>I was sick of just hitting the guess key so based on this documentation: <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key#examples">https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key#examples</a>
+            I figured out how to do key presses while in the text box. So, now when enter is clicked in the guess box it will guess for you.<br>
+
+            <br>I also fixed the issue with loading. Now the browser will say loading then it will all load. I did this with a while loop and a boolean. I tried reading up on how to do it
+            with a promise and WaitUntil function, however I didn't understand promises they were very confsuing and it didn't work when I tried so I swithed to using the while loop and the boolean.
+        </p>
+        
+
+        <h2>Sources</h2>
+        Flags BG : <a href="https://globallibertymedia.com/what-makes-a-country/">https://globallibertymedia.com/what-makes-a-country/</a>
+        CopyRight Free Ding: <a href="https://pixabay.com/sound-effects/ping-82822/">https://pixabay.com/sound-effects/ping-82822/</a>
+        Negative Beeps: <a href="https://pixabay.com/sound-effects/negative-beeps-6008/">https://pixabay.com/sound-effects/negative-beeps-6008/</a>
+    </body>
+</html>
